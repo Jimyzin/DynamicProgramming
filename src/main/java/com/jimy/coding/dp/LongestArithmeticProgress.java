@@ -1,6 +1,5 @@
 package com.jimy.coding.dp;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 public class LongestArithmeticProgress {
