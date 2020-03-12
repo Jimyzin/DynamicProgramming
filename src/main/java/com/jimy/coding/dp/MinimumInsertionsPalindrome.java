@@ -12,7 +12,7 @@ package com.jimy.coding.dp;
  * abcde: Number of insertions required is 4 i.e. edcbabcde
  */
 
-public class MaximumInsertionsPalindrome {
+public class MinimumInsertionsPalindrome {
 
     /**
      * A recursive approach to find minimum insertions in a string to make it palindromic
