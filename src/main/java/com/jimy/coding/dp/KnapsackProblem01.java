@@ -54,6 +54,11 @@ public class KnapsackProblem01 {
         int[] weight = new int[]{1, 3, 4, 5};
         int[] val = new int[]{1, 4, 5, 7};
         int totalWeight = 7;
+        /*
+        int[] weight = new int[]{10, 20, 30};
+        int[] val = new int[]{60, 100, 120};
+        int totalWeight = 50;
+         */
         int length = weight.length;
         int[][] table = calculateKnapsack(weight, val, totalWeight);
         System.out.println("0/1 Knapsack value: " + table[length][totalWeight]);
