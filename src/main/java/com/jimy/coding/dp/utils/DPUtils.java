@@ -5,7 +5,7 @@ package com.jimy.coding.dp.utils;
  */
 public class DPUtils {
 
-    public static void print2DArray(int[][] arr, int rows, int columns) {
+    public static void print2DArray(Integer[][] arr, int rows, int columns) {
 
         for(int r = 0; r < rows; r++) {
             for(int c = 0; c < columns; c++) {
