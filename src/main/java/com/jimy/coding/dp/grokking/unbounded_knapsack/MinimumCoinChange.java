@@ -100,5 +100,7 @@ public class MinimumCoinChange {
         int[] denominations = {1, 2, 3};
         System.out.println("Result (solveMinimumCoinChangeRecursiveWithMemoization): " + solveMinimumCoinChangeRecursiveWithMemoization(denominations, 5));
         System.out.println("Result (solveMinimumCoinChangeDP): " + solveMinimumCoinChangeDP(denominations, 5));
+        System.out.println("Result (solveMinimumCoinChangeRecursiveWithMemoization): " + solveMinimumCoinChangeRecursiveWithMemoization(denominations, 11));
+        System.out.println("Result (solveMinimumCoinChangeDP): " + solveMinimumCoinChangeDP(denominations, 11));
     }
 }
