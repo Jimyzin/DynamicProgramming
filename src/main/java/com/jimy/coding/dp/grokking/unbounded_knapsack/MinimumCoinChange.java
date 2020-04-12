@@ -20,6 +20,9 @@ package com.jimy.coding.dp.grokking.unbounded_knapsack;
  */
 public class MinimumCoinChange {
 
+    /**
+     * Approach 1: This is brute-force top-down recursive approach with memoization.
+     */
     static int solveMinimumCoinChangeRecursiveWithMemoization(Integer[][] dp, int[] denominations, int amount, int index) {
 
         int len = denominations.length;
@@ -49,9 +52,13 @@ public class MinimumCoinChange {
 
     static int solveMinimumCoinChangeRecursiveWithMemoization(int[] denominations, int amount) {
         Integer[][] dp = new Integer[denominations.length][amount + 1];
-        return solveMinimumCoinChangeRecursiveWithMemoization(dp, denominations, amount, 0);
+        int result = solveMinimumCoinChangeRecursiveWithMemoization(dp, denominations, amount, 0);
+        return result == Integer.MAX_VALUE ? -1 : result;
     }
 
+    /**
+     * Approach 2: This is bottom-up dynamic programming approach.
+     */
     static int solveMinimumCoinChangeDP(int[] denominations, int amount) {
 
         // base check
@@ -67,7 +74,7 @@ public class MinimumCoinChange {
             for (int column = 1; column <= amount; column++) {
                 int include = Integer.MAX_VALUE, exclude = Integer.MAX_VALUE;
 
-                if (denominations[row] <= column) {
+                if (denominations[row] <= column && dp[row][column - denominations[row]] != Integer.MAX_VALUE) {
                     include = 1 + dp[row][column - denominations[row]];
                 }
 
@@ -93,7 +100,7 @@ public class MinimumCoinChange {
         }
         System.out.println();
 
-        return dp[len - 1][amount];
+        return dp[len - 1][amount] == Integer.MAX_VALUE ? -1 : dp[len - 1][amount];
     }
 
     public static void main(String[] args) {
