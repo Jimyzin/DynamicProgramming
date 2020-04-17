@@ -52,4 +52,10 @@ public class DPUtils {
         }
         System.out.println("------------------------------------------");
     }
+
+    public static void print1DArray(int[] arr, int length) {
+        for (int a : arr)
+        System.out.print(a + "\t");
+        System.out.println();
+    }
 }
