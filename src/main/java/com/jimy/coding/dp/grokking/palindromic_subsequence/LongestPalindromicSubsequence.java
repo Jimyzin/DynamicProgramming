@@ -65,7 +65,7 @@ public class LongestPalindromicSubsequence {
         for (int diagonal = 0; diagonal < len; diagonal++) {
             dp[diagonal][diagonal] = 1;
         }
-        DPUtils.print2DArray(dp, len, len);
+        //DPUtils.print2DArray(dp, len, len);
 
        for (int i = 1; i < len; i++) {
            for (int column = i, row = 0; column < len && row < len - i; column++, row++) {
