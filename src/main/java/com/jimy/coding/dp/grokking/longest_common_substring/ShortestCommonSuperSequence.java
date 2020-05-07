@@ -2,6 +2,19 @@ package com.jimy.coding.dp.grokking.longest_common_substring;
 
 /**
  * Created by Jimy on 06-05-2020.
+ * <p>
+ * Given two sequences ‘s1’ and ‘s2’, write a method to find the length of the shortest sequence which has ‘s1’ and ‘s2’ as subsequences.
+ * <p>
+ * Example 2:
+ * <p>
+ * Input: s1: "abcf" s2:"bdcf"
+ * Output: 5
+ * Explanation: The shortest common super-sequence (SCS) is "abdcf".
+ * Example 2:
+ * <p>
+ * Input: s1: "dynamic" s2:"programming"
+ * Output: 15
+ * Explanation: The SCS is "dynprogrammicng".
  */
 public class ShortestCommonSuperSequence {
 
